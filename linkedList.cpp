@@ -31,12 +31,16 @@ node *takeInput(){
 	return head;
 }
 
-void print( node* head){
-	node *temp = head;
-	while( temp!= NULL){
-		cout<<temp->data<<" "<<endl;
-		temp=temp->next;
-	}
+void print( node* head, int i){
+	int count=0;
+   	 node* temp=head;
+    	while(temp!=NULL && count <=i){
+        	if(count==i){
+            		cout<<temp->data<<" ";
+        	}
+        	count++;
+        	temp=temp->next;
+   	 }
 }
 
 int length(node *head){
